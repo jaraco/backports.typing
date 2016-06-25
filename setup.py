@@ -46,6 +46,7 @@ setup_params = dict(
 	] + pytest_runner + sphinx + wheel,
 	tests_require=[
 		'pytest>=2.8',
+		'path.py',
 	],
 	classifiers=[
 		"Development Status :: 5 - Production/Stable",
