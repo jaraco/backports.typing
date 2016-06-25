@@ -22,6 +22,8 @@ of Python 3.5 and later by importing from the backports namespace.
 
     from backports import typing
 
+Note that the bundled version currently only supports Python 3.2+.
+
 License
 -------
 

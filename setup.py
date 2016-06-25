@@ -47,6 +47,7 @@ setup_params = dict(
 	tests_require=[
 		'pytest>=2.8',
 		'path.py',
+		'six',
 	],
 	classifiers=[
 		"Development Status :: 5 - Production/Stable",
