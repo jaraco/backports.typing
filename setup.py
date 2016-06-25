@@ -51,6 +51,7 @@ setup_params = dict(
 		"Development Status :: 5 - Production/Stable",
 		"Intended Audience :: Developers",
 		"License :: OSI Approved :: MIT License",
+		"License :: OSI Approved :: Python Software Foundation License",
 		"Programming Language :: Python :: 2.7",
 		"Programming Language :: Python :: 3",
 	],

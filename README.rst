@@ -14,3 +14,16 @@ Usage
 Simply import the typing module as you would on Python 3.5+.
 
     import typing
+
+This module additionally bundles late versions of the module as
+published in the ``typing`` package as backports.typing, such that
+later releases of ``typing`` can be loaded on earlier versions
+of Python 3.5 and later by importing from the backports namespace.
+
+    from backports import typing
+
+License
+-------
+
+This package is licensed under the OSI MIT License, but the bundled
+typing module is licensed under the Python Software Foundation License.
