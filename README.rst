@@ -8,6 +8,9 @@ Since the inception of this package, a new, more authoritative backport
 has been released as `typing <https://pypi.io/project/typing>`_. This
 project selectively installs that package on the relevant platforms.
 
+For the dependencies to be installed properly, Pip 6.0+ is required
+(or Setuptools 0.7+ if using easy_install).
+
 Usage
 -----
 
