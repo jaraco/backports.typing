@@ -18,7 +18,12 @@ needs_wheel = {'release', 'bdist_wheel'}.intersection(sys.argv)
 wheel = ['wheel'] if needs_wheel else []
 
 name = 'backports.typing'
-description = ''
+description = 'Backport wrapper of standard typing module'
+
+backport_versions = 2.7, 3.2, 3.3, 3.4
+spec_items = map('python_version=="{}"'.format, backport_versions)
+backport_env = ' or '.join(spec_items)
+"an environment marker where the 'typing' backprot is needed"
 
 setup_params = dict(
 	name=name,
@@ -34,6 +39,7 @@ setup_params = dict(
 	install_requires=[
 	],
 	extras_require={
+		':' + backport_env: ['typing'],
 	},
 	setup_requires=[
 		'setuptools_scm>=1.9',
