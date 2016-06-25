@@ -14,3 +14,11 @@ Therefore, a package requiring typing can _require_ this
 package to selectively install the ``typing`` module on
 the relevant platforms and then in the code may simply
 ``import typing``.
+
+Also, hosting was moved to Github with continuous
+deployment.
+
+1.0
+===
+
+Initial release.
