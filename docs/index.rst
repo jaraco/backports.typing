@@ -1,4 +1,4 @@
-Welcome to backports.typing documentation!
+Welcome to skeleton documentation!
 ========================================
 
 .. toctree::
