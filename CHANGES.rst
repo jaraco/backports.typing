@@ -5,6 +5,8 @@ Merge with skeleton.
 
 Use ``pkgutil`` for backports namespace package.
 
+Update bundled typing module to 3.6.1.
+
 1.1
 ===
 
