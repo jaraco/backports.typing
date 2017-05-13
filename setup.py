@@ -3,19 +3,11 @@
 # Project skeleton maintained at https://github.com/jaraco/skeleton
 
 import io
-import sys
 
 import setuptools
 
 with io.open('README.rst', encoding='utf-8') as readme:
 	long_description = readme.read()
-
-needs_pytest = {'pytest', 'test'}.intersection(sys.argv)
-pytest_runner = ['pytest_runner'] if needs_pytest else []
-needs_sphinx = {'release', 'build_sphinx', 'upload_docs'}.intersection(sys.argv)
-sphinx = ['sphinx', 'rst.linker'] if needs_sphinx else []
-needs_wheel = {'release', 'bdist_wheel'}.intersection(sys.argv)
-wheel = ['wheel'] if needs_wheel else []
 
 name = 'backports.typing'
 description = 'Backport wrapper of standard typing module'
@@ -25,7 +17,7 @@ spec_items = map('python_version=="{}"'.format, backport_versions)
 backport_env = ' or '.join(spec_items)
 "an environment marker where the 'typing' backprot is needed"
 
-setup_params = dict(
+params = dict(
 	name=name,
 	use_scm_version=True,
 	author="Jason R. Coombs",
@@ -35,19 +27,23 @@ setup_params = dict(
 	url="https://github.com/jaraco/" + name,
 	packages=setuptools.find_packages(),
 	include_package_data=True,
-	namespace_packages=name.split('.')[:-1],
+	python_requires='>=2.7',
 	install_requires=[
 	],
 	extras_require={
 		':' + backport_env: ['typing'],
+		'testing': [
+			'pytest>=2.8',
+			'pytest-sugar',
+		],
+		'docs': [
+			'sphinx',
+			'jaraco.packaging>=3.2',
+			'rst.linker>=1.9',
+		],
 	},
 	setup_requires=[
-		'setuptools_scm>=1.9',
-	] + pytest_runner + sphinx + wheel,
-	tests_require=[
-		'pytest>=2.8',
-		'path.py',
-		'six',
+		'setuptools_scm>=1.15.0',
 	],
 	classifiers=[
 		"Development Status :: 5 - Production/Stable",
@@ -61,4 +57,4 @@ setup_params = dict(
 	},
 )
 if __name__ == '__main__':
-	setuptools.setup(**setup_params)
+	setuptools.setup(**params)

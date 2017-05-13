@@ -1,5 +1,13 @@
-backports.typing
-================
+.. image:: https://img.shields.io/pypi/v/backports.typing.svg
+   :target: https://pypi.org/project/backports.typing
+
+.. image:: https://img.shields.io/pypi/pyversions/backports.typing.svg
+
+.. image:: https://img.shields.io/pypi/dm/backports.typing.svg
+
+.. image:: https://img.shields.io/travis/jaraco/backports.typing/master.svg
+   :target: http://travis-ci.org/jaraco/backports.typing
+
 
 `Backport <https://pypi.python.org/pypi/backports>`_ of the typing module
 as found in Python 3.5, but made available for Python 3.3 and later.
@@ -11,8 +19,14 @@ project selectively installs that package on the relevant platforms.
 For the dependencies to be installed properly, Pip 6.0+ is required
 (or Setuptools 0.7+ if using easy_install).
 
+License
+=======
+
+This package is licensed under the OSI MIT License, but the bundled
+typing module is licensed under the Python Software Foundation License.
+
 Usage
------
+=====
 
 Simply import the typing module as you would on Python 3.5+.
 
@@ -26,9 +40,3 @@ of Python 3.5 and later by importing from the backports namespace.
     from backports import typing
 
 Note that the bundled version currently only supports Python 3.2+.
-
-License
--------
-
-This package is licensed under the OSI MIT License, but the bundled
-typing module is licensed under the Python Software Foundation License.
